@@ -1,0 +1,426 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+@font-face {
+  font-family: 'Dalek Pinpoint';
+  src: url('/fonts/dalekpinpointbold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+* { 
+  margin: 0;
+  padding: 0;
+}
+
+/*dit voorkomt horizontaal scrollen*/
+body, html {
+  overflow-x: hidden;
+}
+
+body {
+  background-color: white;
+  color: black;
+}
+
+h1 {
+  color: #336280;
+  font-family: 'Dalek Pinpoint';
+  font-size: 2.5em;
+}
+
+h2 {
+  font-family: 'Literata', serif;
+  font-size: 3em;
+  line-height: 1.2;
+  text-align: left;
+  margin: 1vw;
+  margin-left: 3vw;
+}
+
+h3, h4, p {
+  font-family: 'League Spartan', sans-serif;
+}
+
+header {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2.5vh;
+}
+
+.logo {
+  height: 9vw;
+  margin: 1.5vw;
+}
+
+nav {
+  width: 100%;
+}
+
+ul {
+  list-style-type: none;
+  overflow: hidden;
+  background-color: #aa6060;
+}
+
+li {
+  float: left;
+  padding: 0;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 1.3em;
+  text-decoration: none;
+  font-family: 'League Spartan', sans-serif;
+}
+
+li a img {
+  height: 1.6vh;
+}
+
+li a:hover:not(.active) {
+  background-color: #683a3a;
+}
+
+li a:focus {
+  outline: 4px solid black ;
+  background-color: #336280;
+}
+
+.active {
+  background-color: #683a3a;
+}
+
+.opening {
+  display: flex;
+  align-items: center;
+  background-color: #ffe5e5;
+  padding: 5vh;
+}
+
+.tagline {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.teaservideo {
+  margin-left: 8vw;
+  margin-right: 2vw;
+}
+
+iframe {
+  border: 0.7em solid #336280;
+  width: 39vw;
+  height: 22vw;
+  border-radius: 0.4em;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+iframe:hover {
+  transform: scale(1.05);
+}
+
+/*Deze keyframe is overgenomen van Lisette Pool*/
+@keyframes slideIn {
+  from { 
+      transform: translateX(-100%); 
+  }
+  to { 
+      transform: translateX(0); 
+  }
+}
+
+@keyframes bounce {
+  0%, 5%, 15%, 25%, 35% {
+    transform: translateY(0); 
+  }
+  10% {
+    transform: translateY(-30px); 
+  }
+  20% {
+    transform: translateY(-15px); 
+  }
+  40%, 100% {
+    transform: translateY(0); 
+  }
+}
+
+.knop {
+  color: #336280;
+  font-size: 1.5em;
+  font-weight: bold;
+  letter-spacing: 0.03em;
+  padding: 0.6em 1.4em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 0.1em solid;
+  border-radius: 0.3em;
+  border-top: 0;
+  border-left: 0;
+  border-color: #ffffe5;
+  border-bottom-color: #336280;
+  border-right-color: #336280;
+  background-color: #ffffe5;
+  transition: all 600ms ease;
+  margin-top: 6vh;
+  margin-left: 6.5vw;
+  font-family: 'League Spartan', sans-serif;
+  animation: slideIn 1.3s ease-out, bounce 9.5s infinite forwards;
+  animation-delay: 0s, 8s;
+}
+
+.knop:hover {
+  color: #ffffe5;
+  border-color: #336280;
+  border-bottom-color: #ffffe5;
+  border-right-color: #ffffe5;
+  background-color: #336280;
+  animation-play-state: paused;
+}
+
+.engagementproducts,
+.host-intro {
+  background-color: #ffffe5;
+  width: 100%;
+  text-align: left;
+  padding: 1.25em;
+  letter-spacing: 0.05em;
+  font-size: 0.7em;
+}
+
+.producten-section, .hosts-section {
+  background-color: white;
+  display: flex;
+  justify-content: center;  
+  align-items: center;     
+  gap: 6.25em; 
+  margin: 2%;               
+}
+
+.notitieboek,
+.boekenlegger,
+.host {
+  background: #f8f8f8;
+  padding: 1.25em;
+  width: 20%;
+  height: 45vh;
+  box-shadow: 0px 0.3em 1.25em 0.2em #38465e, 0.5em 0.5em 0 #315973;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.notitieboek img,
+.boekenlegger img {
+  width: 100%;
+  height: auto;
+  max-width: 15em;
+  border-radius: 8px;
+  margin-bottom: 0.3em;
+}
+
+.notitieboek h3,
+.boekenlegger h3,
+.host h3 {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.notitieboek p,
+.boekenlegger p {
+  text-align: center;
+  font-size: 1.3em;
+  margin-bottom: 0.6em;
+}
+
+footer {
+  text-align: center;
+  background-color: #aa6060;
+  color: white;
+  padding: 2.5vh;
+  margin-top: 2vw;
+}
+
+.intro {
+  position: relative;
+  font-family: 'Literata', serif;
+  background-color: #ffe5e5;
+  height: 90vh;
+  padding: 1.25em;
+}
+
+.intro-img2 {
+  position: absolute;
+  top: 40vh;
+  left: 55vw;
+  width: 36vw;
+}
+
+@keyframes zoomIn {
+  from { 
+      transform: scale(0); 
+  }
+  to { 
+      transform: scale(1); 
+  }
+}
+
+.Logo-over-ons {
+  position: absolute;
+  top: 9vh;
+  right: 27vw;
+  width: 8vw;
+  animation: zoomIn 4s;
+}
+
+.intro-img1 {
+  position: absolute;
+  width: 35vw;
+  top: 15vh;
+  left: 6vw;
+  margin-top: 1vw;
+}
+
+.intro article {
+  position: absolute;
+  background-color: #ffffe5;
+  padding: 1em;
+  box-shadow: 0.4em 0.4em 0 #315973;
+  line-height: 1.3em;
+}
+
+.article1 {
+  top: 14vh;
+  left: 6vw;
+  width: 28vw;
+  height: fit-content;
+  margin-top: 1vw;
+}
+
+.article2 {
+  top: 37vh;
+  left: 56vw;
+  width: 30vw;
+  height: fit-content;
+}
+
+.article3 {
+  top: 70vh;
+  left: 15vw;
+  width: 25vw;
+  height: fit-content;
+}
+
+.host {
+  height: 57vh;
+}
+
+.host p {
+  font-size: 1.1em;
+}
+
+.host img {
+  width: 20vw;
+  border-radius: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.overzichtspagina {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 2.5em;
+}
+
+.afl {
+  background: #f8f8f8;
+  width: 41vw;
+  min-width: 35vw;
+  padding: 1.5em;
+  border: 0.05em solid #ddd;
+  box-shadow: 0px 0.3em 1.25em 0.2em #38465e, 0.5em 0.5em 0 #315973;
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  height: 29vh;
+  position: relative;
+}
+
+.afl img {
+  width: 15vw;
+}
+
+.afl div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.afl h3 {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 0.2em;
+  margin-left: 0.3em;
+}
+
+.afl h4 {
+  font-size: 1.1em;
+  margin-bottom: 0.2em;
+  margin-left: 0.3em;
+}
+
+.afl p {
+  font-size: 1em;
+  margin-top: 0;
+  line-height: 1.4em;
+  margin-left: 0.3em;
+}
+
+.afl .nummer {
+  position: absolute;
+  top: 1.5vh;
+  left: 1vw;
+  background-color: #336280;
+  color: #ffe5e5;
+  font-size: 2.5em;
+  font-weight: bold;
+  width: 4vw;
+  height: 4vw;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+@keyframes rotate {
+  0% { 
+      transform: rotate(0deg); 
+  }
+  50% { 
+      transform: rotate(360deg); 
+  }
+  100% { 
+      transform: rotate(360deg); 
+  }
+}
+
+.nummer {
+  animation: rotate 10s infinite forwards;
+}
